@@ -1,0 +1,7 @@
+{
+  "name": "reactivandovidas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
