@@ -1,0 +1,154 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1" size-md="1">
+          <ion-icon name="person-circle-outline" size="large" color="light" routerLink="/perfil"></ion-icon>
+        </ion-col>
+        <ion-col class="title-center">
+          <ion-title color="light">Productos</ion-title>
+        </ion-col>
+        <ion-col size="1" size-md="1">
+          <ion-buttons color="light" >
+            <ion-button id="popover-button4">
+              <ion-icon name="ellipsis-vertical" color="light"></ion-icon>
+            </ion-button>
+            <ion-popover trigger="popover-button4" [dismissOnSelect]="true">
+              <ng-template>
+                <ion-content color="light">
+                  <ion-list color="light">
+                    <ion-item  color="light" [button]="true" [detail]="false"routerLink="/nosotros">Nosotros</ion-item>
+                    <ion-item  color="light"[button]="true" [detail]="false">Configuración</ion-item>
+                    <ion-item  color="light"[button]="true" [detail]="false" routerLink="/acercade">Acerca de</ion-item>
+                  </ion-list>
+                </ion-content>
+              </ng-template>
+            </ion-popover>
+          </ion-buttons>        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Herramientas de rehabilitación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list color="light">
+        <ion-item color="light">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/bandas.jpeg" />
+          </ion-thumbnail>
+          <ion-label color="light">
+            <ion-text color="primary">
+              <h2><strong> Bandas de resistencia </strong></h2>
+            </ion-text>
+            <p>
+              <ion-text color="dark">Bandas para ejercicios de fortalecimiento.</ion-text>
+            </p>
+            <ion-text>
+              <h3><strong> $ 189.00 </strong></h3>
+            </ion-text>
+            <ion-button size="small" shape="round" (click)="agregarAlCarrito({ nombre: 'Bandas de resistencia', descripcion: 'Bandas para ejercicios de fortalecimiento', precio: 189.00, imagen: 'assets/images/bandas.jpeg' })">
+              Agregar al carrito
+            </ion-button>
+          </ion-label>
+        </ion-item>
+
+        <ion-item color="light">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/pelota.webp" />
+          </ion-thumbnail>
+          <ion-label color="light">
+            <ion-text color="primary">
+              <h2><strong> Pelotas de ejercicio </strong></h2>
+            </ion-text>
+            <p>
+              <ion-text color="dark">Pelota utilizada en terapia y ejercicios de estabilidad.</ion-text>
+            </p>
+            <ion-text>
+              <h3><strong> $ 879.00 </strong></h3>
+            </ion-text>
+            <ion-button size="small" shape="round" (click)="agregarAlCarrito({ nombre: 'Pelotas de ejercicio', descripcion: 'Pelota utilizada en terapia y ejercicios de estabilidad', precio: 879.00, imagen: 'assets/images/pelota.webp' })">
+              Agregar al carrito
+            </ion-button>
+          </ion-label>
+        </ion-item>
+
+        <ion-item color="light">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/rodillo.webp" />
+          </ion-thumbnail>
+          <ion-label color="light">
+            <ion-text color="primary">
+              <h2><strong> Rodillo de espuma </strong></h2>
+            </ion-text>
+            <p>
+              <ion-text color="dark">Rodillo para auto-masaje y liberación miofascial.</ion-text>
+            </p>
+            <ion-text>
+              <h3><strong> $ 229.00 </strong></h3>
+            </ion-text>
+            <ion-button size="small" shape="round" (click)="agregarAlCarrito({ nombre: 'Rodillo de espuma', descripcion: 'Rodillo para auto-masaje y liberación miofascial', precio: 229.00, imagen: 'assets/images/rodillo.webp' })">
+              Agregar al carrito
+            </ion-button>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header color="light">
+      <ion-card-title>Productos de cuidado personal</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list color="light">
+        <ion-item color="light">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/fisiocrem.jpg" />
+          </ion-thumbnail>
+          <ion-label color="light">
+            <ion-text color="primary">
+              <h2><strong> Crema FisioCrem </strong></h2>
+            </ion-text>
+            <p>
+              <ion-text color="dark">Crema para la preparación muscular.</ion-text>
+            </p>
+            <ion-text>
+              <h3><strong> $ 229.00 </strong></h3>
+            </ion-text>
+            <ion-button size="small" shape="round" (click)="agregarAlCarrito({ nombre: 'Crema FisioCrem', descripcion: 'Crema para la preparación muscular', precio: 229.00, imagen: 'assets/images/fisiocrem.jpg' })">
+              Agregar al carrito
+            </ion-button>
+          </ion-label>
+        </ion-item>
+
+        <ion-item  color="light">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/images/aceite.webp" />
+          </ion-thumbnail>
+          <ion-label>
+            <ion-text color="primary">
+              <h2><strong> Aceite para masaje Aromaterapia </strong></h2>
+            </ion-text>
+            <p>
+              <ion-text color="dark">Aceite utilizado en aromaterapia o masajes</ion-text>
+            </p>
+            <ion-text>
+              <h3><strong> $ 129.00 </strong></h3>
+            </ion-text>
+            <ion-button size="small" shape="round" (click)="agregarAlCarrito({ nombre: 'Aceite para masaje Aromaterapia', descripcion: 'Aceite utilizado en aromaterapia o masajes', precio: 129.00, imagen: 'assets/images/aceite.webp' })">
+              Agregar al carrito
+            </ion-button>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

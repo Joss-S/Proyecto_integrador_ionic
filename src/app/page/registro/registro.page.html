@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios" color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/inicio-sesion">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="secondary">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" mode="ios">
+  <div class="registro-container">
+    <form (ngSubmit)="registrar()">
+      
+      <ion-list>
+        <ion-item>
+          <ion-input name="username" [(ngModel)]="username" label="Usuario" labelPlacement="floating" 
+            type="text" required autocapitalize="none" autocomplete="off"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="name" [(ngModel)]="name" label="Nombre" labelPlacement="floating" 
+            type="text" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="apa" [(ngModel)]="apa" label="Apellido Paterno" labelPlacement="floating" 
+            type="text" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="apm" [(ngModel)]="apm" label="Apellido Materno" labelPlacement="floating" 
+            type="text" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="tele" [(ngModel)]="tele" label="Teléfono" labelPlacement="floating" 
+            type="tel" maxlength="10" pattern="[0-9]{10}" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="gmail" [(ngModel)]="gmail" label="Correo Electrónico" labelPlacement="floating" 
+            type="email" required autocapitalize="none"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="password" [(ngModel)]="password" label="Contraseña" labelPlacement="floating" 
+            type="password" required minlength="6"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input name="confirmPassword" [(ngModel)]="confirmPassword" label="Confirmar Contraseña" 
+            labelPlacement="floating" type="password" required minlength="6"></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-checkbox [(ngModel)]="aceptoTerminos" name="aceptoTerminos" slot="start"></ion-checkbox>
+          <ion-label class="custom-checkbox-label">
+            Acepto los <a (click)="verTerminos()">Términos y Condiciones</a>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <div class="boton-guardar">
+        <ion-button expand="full" type="submit" [disabled]="!formValido()" color="primary">
+          Guardar
+        </ion-button>
+      </div>
+
+    </form>
+  </div>
+</ion-content>
+

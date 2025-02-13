@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Comprobante de Compra</ion-title>
+    <ion-buttons slot="start" routerLink="/inicio">
+      <ion-back-button default-href="#" color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="comprobantePDF">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Detalles de la Compra</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let item of carrito">
+            <ion-thumbnail slot="start">
+              <img [src]="item.imagen || 'https://ionicframework.com/docs/img/demos/thumbnail.svg'" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>{{ item.nombre }}</h2>
+              <p>{{ item.descripcion }}</p>
+              <h3><strong> $ {{ item.precio | number:'1.2-2' }} </strong></h3>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-item>
+          <ion-label><strong>Total:</strong></ion-label>
+          <ion-text color="primary">
+            <h2><strong>$ {{ total | number:'1.2-2' }}</strong></h2>
+          </ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-button expand="full" color="success" (click)="generarPDF()">
+    Descargar PDF
+  </ion-button>
+</ion-content>

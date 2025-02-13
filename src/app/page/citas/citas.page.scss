@@ -1,0 +1,65 @@
+.title-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inline-radio {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 0; 
+  }
+  
+  .radio-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; 
+    margin: 0 10px; 
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50;  
+  }
+
+
+ion-datetime {
+  --background: white;  
+  --color: black;       
+}
+
+
+ion-datetime .datetime-text {
+  color: black;  
+}
+
+ion-datetime .calendar-day {
+  color: black; 
+}
+
+
+ion-datetime .time-body {
+  background-color: white;  
+  color: white;             
+}
+
+ion-datetime .time-picker {
+  background-color: white;  
+}
+
+ion-datetime .time-picker .datetime-text {
+  color: white;  
+}
+
+ion-datetime .time-picker .datetime-button {
+  color: white; 
+}
+
+
+ion-datetime .datetime-button {
+  border: 1px solid white;  
+}
+

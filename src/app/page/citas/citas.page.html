@@ -1,0 +1,106 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1" size-md="1"><ion-icon name="person-circle-outline" size="large" color="light" routerLink="/perfil"></ion-icon>
+        </ion-col>
+        <ion-col class="title-center"><ion-title color="light">Citas</ion-title></ion-col>
+        <ion-col size="1" size-md="1">
+          <ion-buttons>
+            <ion-button id="popover-button3">
+              <ion-icon name="ellipsis-vertical" color="light"></ion-icon>
+            </ion-button>
+            <ion-popover trigger="popover-button3" [dismissOnSelect]="true">
+              <ng-template>
+                <ion-content>
+                  <ion-list color="light">
+                    <ion-item [button]="true" [detail]="false" color="light" routerLink="/nosotros">Nosotros</ion-item>
+                    <ion-item [button]="true" [detail]="false" color="light">Configuración</ion-item>
+                    <ion-item [button]="true" [detail]="false" color="light" routerLink="/acercade">Acerca de</ion-item>
+                  </ion-list>
+                </ion-content>
+              </ng-template>
+            </ion-popover>
+          </ion-buttons>        
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Agenda / Registro de cita </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content color="light">
+      <ion-item color="light">
+        <ion-input name="descripcion" [(ngModel)]= "descripcion" label="Descripcion" labelPlacement="floating" type="text" required></ion-input>
+      </ion-item>
+      <ion-text color="dark">Fecha y hora de la cita</ion-text>
+      <ion-datetime value="2022-04-21T00:00:00" min="2025-02-01T00:08:00" max="2060-05-31T23:59:59"></ion-datetime>
+      <ion-item color="light" color="light">
+        <ion-select label="Servicio" label-placement="floating">
+          <ion-select-option value="paralisis">Paralisis facial</ion-select-option>
+          <ion-select-option value="esguinces">Esguinces</ion-select-option>
+          <ion-select-option value="desgarres">Desgarres musculares</ion-select-option>
+          <ion-select-option value="esguinces">Distenciones</ion-select-option>
+          <ion-select-option value="esguinces">Sindrome del Tuner Carpiano</ion-select-option>
+          <ion-select-option value="esguinces">Nervio Siatico</ion-select-option>
+          <ion-select-option value="esguinces">Masaje relajante</ion-select-option>
+          <ion-select-option value="esguinces">Masaje descontracturante</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item color="light">
+        <ion-select label="Empleado" label-placement="floating">
+          <ion-select-option value="paralisis">Lic. José Carlos Naredo Matamoros</ion-select-option>
+          <ion-select-option value="esguinces">Lic. Mariana Naredo Matamoros</ion-select-option>
+          <ion-select-option value="desgarres">Lic. Israel Melo Barbosa</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+ 
+ <ion-item color="light">
+    <ion-label class="center">¿Es para usted la cita?</ion-label>
+  </ion-item>
+
+    <div class="center">
+      <ion-radio-group>
+        <ion-item class="inline-radio" lines="none"  color="light">
+          <div class="radio-option">
+            <ion-label>Si</ion-label>
+            <ion-radio slot="start" value="si"></ion-radio>
+          </div>
+          <div class="radio-option">
+            <ion-label>No</ion-label>
+            <ion-radio slot="start" value="no"></ion-radio>
+          </div>
+        </ion-item>
+      </ion-radio-group>
+    </div>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>Datos del paciente</ion-card-title>
+    </ion-card-header>
+  
+    
+    <ion-card-content color="light">
+      <ion-item color="light">
+        <ion-input name="name" [(ngModel)]= "name" label="Nombre" labelPlacement="floating" type="text" required></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-input name="apellidoP" [(ngModel)]= "apellidoP" label="Apellido paterno" labelPlacement="floating" type="text" required></ion-input>
+      </ion-item>
+      <ion-item color="light">
+        <ion-input name="apellidoM" [(ngModel)]= "apellidoM" label="Apellido materno" labelPlacement="floating" type="text" required></ion-input>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title color="secondary">Perfil</ion-title>
+    <ion-buttons slot="start" routerLink="/inicio">
+      <ion-back-button default-href="#" color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light">
+  <div class="profile-container">
+    <ion-avatar class="ion-avatar-img">
+      <img alt="person" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+    </ion-avatar>
+
+    <ion-card class="ion-card" color="light">
+      <ion-card-header>
+        <ion-card-title>Información del Usuario</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-input label="Nombre del usuario" labelPlacement="floating" type="text" [(ngModel)]="usuario.username" readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Apellido paterno" labelPlacement="floating" type="text" [(ngModel)]="usuario.apa" readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Apellido materno" labelPlacement="floating" type="text" [(ngModel)]="usuario.apm" readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Teléfono" labelPlacement="floating" type="tel" [(ngModel)]="usuario.tele" readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Correo electrónico" labelPlacement="floating" type="email" [(ngModel)]="usuario.gmail" readonly></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card color="primary" (click)="cerrarSesion()">  
+      <ion-card-content> Cerrar sesión </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" routerLink="/inicio">
+      <ion-back-button default-href="#" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+    </ion-buttons>
+    <ion-title color="light">Nosotros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]= "true" color="light">
+
+  <ion-card color="light">
+    <ion-card-content style="color: black;">
+      Contamos con una variedad de servicios para usted y para su salud.
+      <ion-img src="assets/images/fisioterapia.png" alt="fisioterapia"></ion-img>
+        <ul class="bullet-list" color="dark">
+            <li style="color: black;">Masajes relajantes</li>
+            <li style="color: black;">Rehabilitación física</li>
+            <li style="color: black;">Cuerpo completo</li>
+            <li style="color: black;">Zonas específicas</li>
+          </ul>
+          
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title><strong>Nuestro equipo</strong></ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content style="color: black;">
+      Actualmente solo se cuenta con un fisioterapeuta, sin embargo se encuentra especializado para atender las necesidades del paciente, altamente capacitado para cuidar su salud.
+      <ion-img src="assets/images/josecarlos.jpg" alt="fisioterapeuta"></ion-img>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card  color="light">
+    <ion-card-header>
+      <ion-card-title><strong>Contacto</strong></ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content style="color: black;">
+      Ponte en contacto con nosotros, agenda tus citas y solicita ayuda e información sobre nuestros servicios.<br>
+      Clinica Reactivando vidas<br>
+      Av 6 entre calles 4 y 6<br>
+      Cuitláhuac, Veracruz, México
+    </ion-card-content>
+  </ion-card>
+</ion-content>
